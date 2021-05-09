@@ -63,6 +63,7 @@ console.log(process.env.MAIL)
 
                 } else {
 //                   res.redirect('https://prasannavenkatesh.netlify.app/#success')
+                    console.log('entry1')
                     res.send("thanks for submission")
                 }
 
