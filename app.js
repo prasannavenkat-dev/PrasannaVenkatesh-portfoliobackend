@@ -62,7 +62,7 @@ console.log(process.env.MAIL)
 
 
                 } else {
-                  res.redirect('https://prasannavenkatesh.netlify.app/#success')
+                  res.status(200).send("Email successfully sent to recipient!");
                   
                    
                 }
