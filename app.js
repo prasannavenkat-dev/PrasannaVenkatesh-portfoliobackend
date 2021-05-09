@@ -57,13 +57,13 @@ console.log(process.env.MAIL)
                 if (err) {
                   console.log('hi',err);
 //                   res.redirect('https://prasannavenkatesh.netlify.app/#failure')
-                    res.send('error happend")
+                    res.send("error happend")
                     
 
 
                 } else {
 //                   res.redirect('https://prasannavenkatesh.netlify.app/#success')
-                    res.send('thanks for submission")
+                    res.send("thanks for submission")
                 }
 
 
