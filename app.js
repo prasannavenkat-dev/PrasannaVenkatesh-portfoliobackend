@@ -60,7 +60,7 @@ console.log(process.env.MAIL)
 
 
                 } else {
-                  res.redirect('https://prasannavenkatesh.netlify.app/#success')
+                  res.redirect('https://www.google.com/')
                 }
 
 
