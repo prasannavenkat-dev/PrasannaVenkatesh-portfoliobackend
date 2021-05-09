@@ -65,14 +65,14 @@ console.log(process.env.MAIL)
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
                   console.log('hi',err);
-//                   res.redirect('https://prasannavenkatesh.netlify.app/#failure')
-                    res.send("error happend")
+                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
                     
 
 
                 } else {
-                  res.status(200).send("Email successfully sent to recipient!");
-                  
+//                   res.status(200).send("Email successfully sent to recipient!");
+                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
+                                  
                    
                 }
 
