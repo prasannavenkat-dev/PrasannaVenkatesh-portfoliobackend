@@ -42,7 +42,6 @@ console.log(process.env.MAIL)
         else{
             console.log('server ready')
         }
- 
 
 
       });
@@ -71,14 +70,13 @@ console.log(process.env.MAIL)
 
                 } else {
                   res.send('success')
-                    
+                }
 
 
 
               });
 
             });
-
       
           });
 
