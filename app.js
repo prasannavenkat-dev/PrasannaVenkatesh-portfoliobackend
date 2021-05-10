@@ -65,11 +65,10 @@ console.log(process.env.MAIL)
               //3.
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
-                  res.redirect('https://www.youtube.com/')
-
+                  res.status(500).send("oops!Something wrong")
 
                 } else {
-                  res.redirect('https://www.google.com/')
+                   res.status(200).send("Email successfully sent to recipient!")
                 }
 
 
