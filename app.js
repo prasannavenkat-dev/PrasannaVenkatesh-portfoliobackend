@@ -15,6 +15,7 @@ app.get('/',function(req,res){
 
 
 
+<<<<<<< HEAD
 app.use(cors({ origin: "*" }));
 
 
@@ -26,6 +27,16 @@ app.use(cors({ origin: "*" }));
 //     );
 //     next();
 //   });
+=======
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin","*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+>>>>>>> 0e40c73670c8561a1970101783cbc441aae01f70
 console.log(process.env.MAIL)
 
     const transporter = nodemailer.createTransport({
@@ -70,12 +81,24 @@ console.log(process.env.MAIL)
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
                   console.log('hi',err);
+<<<<<<< HEAD
                   res.send('failure')
 
 
                 } else {
                   console.log('kki');
                   res.send('success')
+=======
+                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
+                    
+
+
+                } else {
+//                   res.status(200).send("Email successfully sent to recipient!");
+                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
+                                  
+                   
+>>>>>>> 0e40c73670c8561a1970101783cbc441aae01f70
                 }
 
 
