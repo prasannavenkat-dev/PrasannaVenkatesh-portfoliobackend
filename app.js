@@ -80,12 +80,12 @@ app.use((req, res, next) => {
                 if (err) {
                   console.log('hi',err);
 
-                  res.send('failure')
+                 res.redirect('https://www.google.com/')
 
 
                 } else {
                   console.log('kki');
-                  res.send('success')
+                  res.redirect('https://www.youtube.com/')
 
                 } 
 
