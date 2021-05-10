@@ -4,6 +4,8 @@ const app = express();
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty')
 
+const cors = require('cors')
+
 require('dotenv').config()
 
 
@@ -12,6 +14,18 @@ app.get('/',function(req,res){
 })
 
 
+
+app.use(cors({ origin: "*" }));
+
+
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin","*");
+//     res.header(
+//       "Access-Control-Allow-Headers",
+//       "Origin, X-Requested-With, Content-Type, Accept"
+//     );
+//     next();
+//   });
 console.log(process.env.MAIL)
 
     const transporter = nodemailer.createTransport({
@@ -34,7 +48,7 @@ console.log(process.env.MAIL)
  
 
 
-
+      });
 
         app.post("/message", (req, res) => {
             //1.
@@ -56,11 +70,12 @@ console.log(process.env.MAIL)
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
                   console.log('hi',err);
-                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
+                  res.send('failure')
 
 
                 } else {
-                  res.redirect('https://prasannavenkatesh.netlify.app/#success')
+                  console.log('kki');
+                  res.send('success')
                 }
 
 
@@ -72,15 +87,6 @@ console.log(process.env.MAIL)
           });
 
 
-
-
-
-
-
-
-})
-
-
-app.listen(process.env.PORT||3000,function(){
+app.listen(process.env.PORT||5000,function(){
     console.log('server started');
 })
