@@ -3,11 +3,11 @@ const app = express();
 
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty')
-
+ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 require('dotenv').config()
-
+ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/',function(req,res){
     res.send("Hello there,This is server for Prasanna Venkatesh's Portfolio")
@@ -15,19 +15,7 @@ app.get('/',function(req,res){
 
 
 
-<<<<<<< HEAD
-app.use(cors({ origin: "*" }));
-
-
-// app.use((req, res, next) => {
-//     res.setHeader("Access-Control-Allow-Origin","*");
-//     res.header(
-//       "Access-Control-Allow-Headers",
-//       "Origin, X-Requested-With, Content-Type, Accept"
-//     );
-//     next();
-//   });
-=======
+app.use(cors())
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin","*");
     res.header(
@@ -36,7 +24,6 @@ app.use((req, res, next) => {
     );
     next();
   });
->>>>>>> 0e40c73670c8561a1970101783cbc441aae01f70
 console.log(process.env.MAIL)
 
     const transporter = nodemailer.createTransport({
@@ -54,7 +41,6 @@ console.log(process.env.MAIL)
         }
         else{
             console.log('server ready')
-   
         }
  
 
@@ -80,26 +66,13 @@ console.log(process.env.MAIL)
               //3.
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
-                  console.log('hi',err);
-<<<<<<< HEAD
                   res.send('failure')
 
 
                 } else {
-                  console.log('kki');
                   res.send('success')
-=======
-                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
                     
 
-
-                } else {
-//                   res.status(200).send("Email successfully sent to recipient!");
-                  res.redirect('https://prasannavenkatesh.netlify.app/#failure')
-                                  
-                   
->>>>>>> 0e40c73670c8561a1970101783cbc441aae01f70
-                }
 
 
               });
