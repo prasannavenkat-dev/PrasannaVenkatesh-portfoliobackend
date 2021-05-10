@@ -12,13 +12,13 @@
     "node": "14.16.0"
   },
   "dependencies": {
-<<<<<<< HEAD
+
     "cors": "^2.8.5",
     "dotenv": "^9.0.1",
-=======
+
      "cors": "^2.8.5",
     "dotenv": "^9.0.0",
->>>>>>> 0e40c73670c8561a1970101783cbc441aae01f70
+
     "express": "^4.17.1",
     "multiparty": "^4.2.2",
     "nodemailer": "^6.6.0"
