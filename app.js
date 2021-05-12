@@ -57,7 +57,8 @@ console.log(process.env.MAIL)
               //2. You can configure the object however you want
               const mail = {
                 from: data.name,
-                to:process.env.MAIL,
+                to:process.env.MAIL, 
+                subject: "FEEDBACK",
                 text: `${data.txtName} <${data.txtEmail}> \n${data.txtMsg}`,
               };
           
