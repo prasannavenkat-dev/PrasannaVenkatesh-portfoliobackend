@@ -65,10 +65,10 @@ console.log(process.env.MAIL)
               //3.
               transporter.sendMail(mail, (err, data) => {
                 if (err) {
-                  res.status(500).send("oops!Something wrong")
+                  res.send("oops!Something wrong")
 
                 } else {
-                   res.status(200).send("Email successfully sent to recipient!")
+                   res.send("Email successfully sent to recipient!")
                 }
 
 
