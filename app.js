@@ -58,7 +58,6 @@ console.log(process.env.MAIL)
               const mail = {
                 from: data.name,
                 to:process.env.MAIL,
-                subject: data.subject,
                 text: `${data.txtName} <${data.txtEmail}> \n${data.txtMsg}`,
               };
           
