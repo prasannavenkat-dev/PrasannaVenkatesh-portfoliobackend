@@ -68,7 +68,7 @@ console.log(process.env.MAIL)
                   res.send("oops!Something wrong")
 
                 } else {
-                   res.send("Email successfully sent to recipient!")
+                   res.redirect('https://www.google.com/')
                 }
 
 
